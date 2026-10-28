@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BME-MathGraph Node/Edge Schema",
+  "definitions": {
+    "Node": {
+      "type": "object",
+      "required": ["id", "type", "label", "domain", "formal_status"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[DTLIC]_[A-Za-z0-9_]+$" },
+        "type": { "enum": ["D", "L", "T", "I", "C"] },
+        "label": { "type": "string", "maxLength": 200 },
+        "domain": {
+          "type": "array",
+          "items": { "enum": ["NT", "ALG", "GEO", "REP", "PR", "MART", "GEXP", "META"] },
+          "minItems": 1
+        },
+        "formal_status": {
+          "enum": ["axiom", "formalized", "partial", "conjecture", "sorry"]
+        },
+        "lean_ref": { "type": ["string", "null"] },
+        "creators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "agent_id": { "type": "string" },
+              "role": { "enum": ["human", "llm", "lean_tactic", "mixed"] },
+              "weight": { "type": "number", "minimum": 0, "maximum": 1 }
+            }
+          }
+        },
+        "entropy_I": { "type": "number" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "ipfs_cid": { "type": "string" },
+        "tx_hash": { "type": ["string", "null"] }
+      }
+    },
+    "Edge": {
+      "type": "object",
+      "required": ["source", "target", "type"],
+      "properties": {
+        "source": { "type": "string" },
+        "target": { "type": "string" },
+        "type": { "enum": ["uses", "inspires", "analog"] },
+        "weight": { "type": "number", "minimum": 0, "maximum": 1 },
+        "depth": { "type": ["integer", "null"] },
+        "freq": { "type": ["integer", "null"] }
+      }
+    }
+  }
+}

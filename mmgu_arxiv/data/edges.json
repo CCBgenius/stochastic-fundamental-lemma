@@ -1,0 +1,18 @@
+[
+  {
+    "source": "D_M44_Hypothesis",
+    "target": "T_GL2_SFL",
+    "type": "uses",
+    "weight": 0.8,
+    "depth": 1,
+    "freq": 3
+  },
+  {
+    "source": "I_GEXP_Motivation",
+    "target": "T_GL2_SFL",
+    "type": "inspires",
+    "weight": 0.4,
+    "depth": null,
+    "freq": null
+  }
+]

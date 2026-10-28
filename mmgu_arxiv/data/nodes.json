@@ -1,0 +1,42 @@
+[
+  {
+    "id": "D_M44_Hypothesis",
+    "type": "D",
+    "label": "M44 Meta-Structural Hypothesis",
+    "domain": ["META", "NT", "ALG", "GEO", "REP", "MART", "GEXP"],
+    "formal_status": "axiom",
+    "lean_ref": "Mathlib.M44.Axiom",
+    "creators": [{"agent_id": "AIM_Team", "role": "human", "weight": 1.0}],
+    "entropy_I": 0.0,
+    "ipfs_cid": "bafybei_example_m44",
+    "tx_hash": "0xabc123"
+  },
+  {
+    "id": "T_GL2_SFL",
+    "type": "T",
+    "label": "Stochastic Fundamental Lemma for GL(2)",
+    "domain": ["NT", "GEO", "MART", "GEXP"],
+    "formal_status": "sorry",
+    "lean_ref": "Mathlib.MMGU.SFL.GL2.Main",
+    "creators": [
+      {"agent_id": "human_author", "role": "human", "weight": 0.6},
+      {"agent_id": "gpt_prover", "role": "llm", "weight": 0.3},
+      {"agent_id": "lean_tactic", "role": "lean_tactic", "weight": 0.1}
+    ],
+    "entropy_I": 12.7,
+    "ipfs_cid": "bafybej_example_sfl",
+    "tx_hash": "0xdef456"
+  },
+  {
+    "id": "I_GEXP_Motivation",
+    "type": "I",
+    "label": "Why G-expectation: Knightian uncertainty matches Langlands transfer robustness",
+    "domain": ["META", "GEXP"],
+    "formal_status": "conjecture",
+    "lean_ref": null,
+    "creators": [{"agent_id": "human_author", "role": "human", "weight": 1.0}],
+    "entropy_I": 3.2,
+    "ipfs_cid": "bafybek_example_idea",
+    "tx_hash": null
+  }
+]
